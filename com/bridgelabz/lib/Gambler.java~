@@ -10,7 +10,7 @@ package com.bridgelabz.lib;
 
 
 public class Gambler { 
-	public static int simulateTrial(int stake,int goal,int trials) {
+	public static int simulateTrial(int trial,int goal,int trials) {
 		int bets = 0;        // total number of bets made
         	int wins = 0;        // total number of games won
 
