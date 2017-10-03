@@ -1,5 +1,5 @@
 /***************************************************************************
-* Purpose :User Input and Replace String Template “Hello <<UserName>>, How are you?” 
+* Purpose :Find Distinct Random coupon 
 *
 * @author   Aashish
 * @version  1.0
@@ -11,7 +11,7 @@ import java.util.Random;
 public class RandomCoupon {
 
 	static Random random;
-	static int count;
+	static int count=1;
 	static int []tempArr;
 	
 	
@@ -36,11 +36,13 @@ public class RandomCoupon {
 	
 		tempArr=new int[couponNo];
 		arr[0]=RandomCoupon.generateRandom();
+		System.out.println(arr[0]);
 	
 		for(int i=1;i<arr.length;i++) {
 			randomNo=RandomCoupon.generateRandom();
+			
 			flag=0;
-			for (int j=0;j<=i;j++) {
+			for (int j=0;j<i;j++) {
 				if(arr[j]==randomNo) {
 				
 				flag=1;
