@@ -92,6 +92,50 @@ public class TicTacToe {
 		return false;
 
 	}
+	
+	
+	public static boolean computerVictoryCheck() {
+		
+		int i=0;
+		int j=0;	
+		while(i<3) {
+			if(arr[i][j]=='O')
+			
+				if((arr[i][j]==arr[i][j+1])&&(arr[i][j+1]==arr[i][j+2])) {
+				return true;
+			}
+			i++;
+		}
+		 i=0;
+		 j=0;
+
+		while(j<3) {
+			
+			if(arr[i][j]=='X') {
+			if((arr[i][j]==arr[i+1][j])&&(arr[i+1][j]==arr[i+2][j])) {
+				return true;
+			}
+		}
+			j++;
+		}
+
+		i=0;
+		j=0;
+		if(arr[i][j]=='O')
+		if((arr[i][j]==arr[i+1][j+1])&&(arr[i+1][j+1]==arr[i+2][j+2])) {
+				return true;
+		}
+
+		i=0;	
+		j=2;
+		if(arr[i][j]=='O')
+		if((arr[i][j]==arr[i+1][j-1])&&(arr[i+1][j-1]==arr[i+2][j-2])) {
+				return true;
+		}
+
+		return false;
+
+	}
 
 	public static  void display() {
 	
@@ -116,7 +160,12 @@ public class TicTacToe {
 				break;
 			
 			}
-		}while(!victoryCheck());
+			if(computerVictoryCheck()) {
+				System.out.println("computer wins");
+				break;
+			
+			}
+		}while(!computerVictoryCheck()||!victoryCheck());
 	}
 }
 		
