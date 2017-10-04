@@ -29,7 +29,7 @@ public class Factors {
 
     public static void main(String[] args) { 
 
-        // command-line argument
+
         long number = Long.parseLong(args[0]);
 		factor(number);
 
