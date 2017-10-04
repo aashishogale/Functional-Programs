@@ -179,6 +179,10 @@ public class TicTacToe {
 				break;
 			
 			}
+			if(drawCheck()) {
+				System.out.println("draw");
+				break;			
+			}
 		}while(!computerVictoryCheck()||!victoryCheck());
 	}
 }
