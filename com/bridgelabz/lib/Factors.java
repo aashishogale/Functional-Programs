@@ -7,34 +7,27 @@
 ****************************************************************************/
 package com.bridgelabz.lib;
 
-
-
 public class Factors {
 	public static void factor(long number) {
 		System.out.print("The prime factorization of " + number + " is: ");
 
-        // for each potential factor
-        for (long factor = 2; factor*factor <= number; factor++) {
+		// for each potential factor
+		for (long factor = 2; factor * factor <= number; factor++) {
 
-            // if factor is a factor of n, repeatedly divide it out
-            while (number % factor == 0) {
-                System.out.println(factor + " "); 
-                number = number / factor;
-            }
-        }
-	
-	System.out.println(number);	
+			// if factor is a factor of n, repeatedly divide it out
+			while (number % factor == 0) {
+				System.out.println(factor + " ");
+				number = number / factor;
+			}
+		}
+
+		System.out.println(number);
 	}
-	
 
-    public static void main(String[] args) { 
+	public static void main(String[] args) {
 
-
-        long number = Long.parseLong(args[0]);
+		long number = Long.parseLong(args[0]);
 		factor(number);
-
-
-        
 
 	}
 }

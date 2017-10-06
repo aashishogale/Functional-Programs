@@ -12,60 +12,53 @@ package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
-public class Quadratic{
-	
-	static int a,b,c;
+public class Quadratic {
+
+	static int a, b, c;
+
 	public static void enterRoots() {
-		//use scanner object to get user input
-       Scanner sc=new Scanner(System.in);
-       System.out.println("enter a");
-       a=sc.nextInt();
-       System.out.println("enter b");
-       b=sc.nextInt();
-       System.out.println("enter c");
-       c=sc.nextInt();
+		// use scanner object to get user input
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a");
+		a = sc.nextInt();
+		System.out.println("enter b");
+		b = sc.nextInt();
+		System.out.println("enter c");
+		c = sc.nextInt();
 	}
 
-	public static void calculateRoots(int a,int b,int c) {
-     
+	public static void calculateRoots(int a, int b, int c) {
 
-		double root1,root2,d;
-       //use formula 
-       d=(b*b)-(4*a*c);
+		double root1, root2, d;
+		// use formula
+		d = (b * b) - (4 * a * c);
 
-       //use the if else condition
-       if(d>0) {
+		// use the if else condition
+		if (d > 0) {
 
-          System.out.println("roots are real and unequal");
-          root1=(-b+Math.sqrt(d))/(2*a);
-          root2=(-b-Math.sqrt(d))/(2*a);
-          System.out.println("first root is:"+root1);
-          System.out.println("second root is:"+root2);
-       }
+			System.out.println("roots are real and unequal");
+			root1 = (-b + Math.sqrt(d)) / (2 * a);
+			root2 = (-b - Math.sqrt(d)) / (2 * a);
+			System.out.println("first root is:" + root1);
+			System.out.println("second root is:" + root2);
+		}
 
-       else if(d==0) {
+		else if (d == 0) {
 
-          System.out.println("roots are equal and real");
-          root1=(-b+Math.sqrt(d))/(2*a);
-          System.out.println("roots are "+root1);
-      }
-      else {
+			System.out.println("roots are equal and real");
+			root1 = (-b + Math.sqrt(d)) / (2 * a);
+			System.out.println("roots are " + root1);
+		} else {
 
-          System.out.println("roots are imaginary");
-      }
+			System.out.println("roots are imaginary");
+		}
 
 	}
 
+	public static void main(String args[]) {
 
-	
-    public static void main(String args[]) {
-	
-	enterRoots();
-	calculateRoots(a,b,c);
-   
-       
-       
+		enterRoots();
+		calculateRoots(a, b, c);
 
-  
-   }
+	}
 }

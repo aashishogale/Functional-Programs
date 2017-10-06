@@ -6,17 +6,9 @@
 *@since : 04-10-2017
 ****************************************************************************/
 
-
-
 package com.bridgelabz.lib;
 
-
-
-
 public class StringFunction {
-
-
-
 
 	public static void permutate(String permString) {
 		int number = permString.length();
@@ -25,7 +17,6 @@ public class StringFunction {
 			permArray[i] = permString.charAt(i);
 		permutate(permArray, number);
 	}
-
 
 	private static void permutate(char[] permArray, int number) {
 		if (number == 1) {
@@ -36,15 +27,14 @@ public class StringFunction {
 
 		for (int i = 0; i < number; i++) {
 
-			swap(permArray, i, number-1);
+			swap(permArray, i, number - 1);
 
-			permutate(permArray, number-1);
+			permutate(permArray, number - 1);
 
-			swap(permArray, i, number-1);
+			swap(permArray, i, number - 1);
 
 		}
-	}  
-
+	}
 
 	private static void swap(char[] permArray, int i, int j) {
 
@@ -54,10 +44,8 @@ public class StringFunction {
 
 	}
 
-	public static void main(String args[]){
-		
-		System.out.println(StringFunction.permutate("abc"));
+	public static void main(String args[]) {
+
+		StringFunction.permutate("abc");
 	}
-		
-
-
+}
