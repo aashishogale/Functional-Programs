@@ -8,11 +8,11 @@
 package com.bridgelabz.lib;
 
 public class Factors {
-	public static void factor(long number) {
+	public static void factor(int number) {
 		System.out.print("The prime factorization of " + number + " is: ");
 
 		// for each potential factor
-		for (long factor = 2; factor * factor <= number; factor++) {
+		for (int factor = 2; factor * factor <= number; factor++) {
 
 			// if factor is a factor of n, repeatedly divide it out
 			while (number % factor == 0) {
@@ -26,7 +26,7 @@ public class Factors {
 
 	public static void main(String[] args) {
 
-		long number = Long.parseLong(args[0]);
+		int number = Integer.parseInt(args[0]);
 		factor(number);
 
 	}

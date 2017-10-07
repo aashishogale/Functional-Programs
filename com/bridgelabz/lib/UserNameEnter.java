@@ -16,13 +16,15 @@ public class UserNameEnter {
 	}
 
 	public static void main(String args[]) {
-
+		String str="Hello <<UserName>>, How are you?”;";
 		Scanner sc = new Scanner(System.in);
 		String userName;
 		System.out.println("Enter user name");
+		
 		userName = sc.nextLine();
+		String newstr=str.replaceAll("<<UserName>>", userName);
 		if (checkLength(userName)) {
-			System.out.println("Hello " + userName + " How are you");
+			System.out.println(newstr);
 		} else {
 			System.out.println("Error");
 		}

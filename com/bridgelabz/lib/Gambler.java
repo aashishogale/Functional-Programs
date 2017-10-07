@@ -16,15 +16,15 @@ public class Gambler {
 
 		for (int i = 0; i < trials; i++) {
 
-			// do one gambler's ruin simulation
+		
 			int cash = stake;
 			while (cash > 0 && cash < goal) {
 				bets++;
-				if (Math.random() < 0.5) cash++;     // win $1
-				else                     cash--;     // lose $1
+				if (Math.random() < 0.5) cash++;     
+				else                     cash--;     
 			}
             if (cash == goal) wins++;
-                // did gambler go achieve desired goal?
+             
 		
         	}
 	return wins;
