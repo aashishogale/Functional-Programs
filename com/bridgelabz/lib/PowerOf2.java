@@ -8,6 +8,10 @@
 
 package com.bridgelabz.lib;
 
+/**
+ * @author aashish
+ *
+ */
 public class PowerOf2 {
 
 	public static double findPower(int number) {

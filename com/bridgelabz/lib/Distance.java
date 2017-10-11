@@ -9,6 +9,11 @@
 
 package com.bridgelabz.lib;
 
+
+/**
+ * @author aashish
+ * 
+ */
 public class Distance {
 	public static double calcDistance(int x, int y) {
 

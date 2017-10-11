@@ -9,6 +9,10 @@ package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
+/**
+ * @author aashish
+ *
+ */
 public class UserNameEnter {
 
 	public static boolean checkLength(String uName) {
@@ -16,13 +20,13 @@ public class UserNameEnter {
 	}
 
 	public static void main(String args[]) {
-		String str="Hello <<UserName>>, How are you?”;";
+		String str = "Hello <<UserName>>, How are you?”;";
 		Scanner sc = new Scanner(System.in);
 		String userName;
 		System.out.println("Enter user name");
-		
+
 		userName = sc.nextLine();
-		String newstr=str.replaceAll("<<UserName>>", userName);
+		String newstr = str.replaceAll("<<UserName>>", userName);
 		if (checkLength(userName)) {
 			System.out.println(newstr);
 		} else {

@@ -8,6 +8,10 @@
 
 package com.bridgelabz.lib;
 
+/**
+ * @author aashish
+ *
+ */
 public class FlipCoin {
 	public static int countFlips(int total) {
 

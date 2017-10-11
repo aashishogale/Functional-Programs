@@ -9,6 +9,10 @@ package com.bridgelabz.lib;
 
 import java.util.Random;
 
+/**
+ * @author aashish
+ *
+ */
 public class RandomCoupon {
 
 	static Random random;
@@ -33,7 +37,7 @@ public class RandomCoupon {
 
 		tempArr = new int[couponNo];
 		arr[0] = RandomCoupon.generateRandom();
-		//System.out.println(arr[0]);
+		// System.out.println(arr[0]);
 
 		for (int i = 1; i < arr.length; i++) {
 			randomNo = RandomCoupon.generateRandom();
@@ -64,6 +68,6 @@ public class RandomCoupon {
 
 	public static void main(String args[]) {
 		int n = 4;
-		System.out.println("no of Coupons required"+RandomCoupon.countDistinct(n));
+		System.out.println("no of Coupons required" + RandomCoupon.countDistinct(n));
 	}
 }

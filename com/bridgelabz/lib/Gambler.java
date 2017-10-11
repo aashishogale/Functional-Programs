@@ -8,41 +8,40 @@
 
 package com.bridgelabz.lib;
 
-
-public class Gambler { 
-	public static int simulateTrial(int stake,int goal,int trials) {
-		int bets = 0;        // total number of bets made
-        	int wins = 0;        // total number of games won
+/**
+ * @author aashish
+ *
+ */
+public class Gambler {
+	public static int simulateTrial(int stake, int goal, int trials) {
+		int bets = 0; // total number of bets made
+		int wins = 0; // total number of games won
 
 		for (int i = 0; i < trials; i++) {
 
-		
 			int cash = stake;
 			while (cash > 0 && cash < goal) {
 				bets++;
-				if (Math.random() < 0.5) cash++;     
-				else                     cash--;     
+				if (Math.random() < 0.5)
+					cash++;
+				else
+					cash--;
 			}
-            if (cash == goal) wins++;
-             
-		
-        	}
-	return wins;
+			if (cash == goal)
+				wins++;
+
+		}
+		return wins;
 	}
-	
-		
 
-    public static void main(String[] args) {
-        int stake  = Integer.parseInt(args[0]);    // gambler's stating bankroll
-        int goal   = Integer.parseInt(args[1]);    // gambler's desired bankroll
-        int trials = Integer.parseInt(args[2]);    // number of trials to perform
+	public static void main(String[] args) {
+		int stake = Integer.parseInt(args[0]); // gambler's stating bankroll
+		int goal = Integer.parseInt(args[1]); // gambler's desired bankroll
+		int trials = Integer.parseInt(args[2]); // number of trials to perform
 
-        
-		int wins=simulateTrial(stake,goal,trials);
-        System.out.println(wins + " wins of " + trials);
-        System.out.println("Percent of games won = " + 100.0 * wins / trials);
-        
-    }
+		int wins = simulateTrial(stake, goal, trials);
+		System.out.println(wins + " wins of " + trials);
+		System.out.println("Percent of games won = " + 100.0 * wins / trials);
+
+	}
 }
-
-

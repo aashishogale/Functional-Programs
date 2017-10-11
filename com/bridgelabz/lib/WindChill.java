@@ -11,6 +11,10 @@ package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
+/**
+ * @author aashish
+ *
+ */
 public class WindChill {
 	static double temperature;
 	static double velocity;

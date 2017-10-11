@@ -9,6 +9,10 @@ package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
+/**
+ * @author aashish
+ *
+ */
 public class SumIntegerZero {
 	static int[] arr;
 	static int size, count;

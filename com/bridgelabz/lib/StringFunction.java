@@ -10,6 +10,10 @@ package com.bridgelabz.lib;
 
 public class StringFunction {
 
+	/**
+	 * @author aashish
+	 *
+	 */
 	public static void permutate(String permString) {
 		int number = permString.length();
 		char[] permArray = new char[number];

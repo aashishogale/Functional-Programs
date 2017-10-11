@@ -7,6 +7,11 @@
 ****************************************************************************/
 package com.bridgelabz.lib;
 
+
+/**
+ * @author aashish
+ *
+ */
 public class Factors {
 	public static void factor(int number) {
 		System.out.print("The prime factorization of " + number + " is: ");

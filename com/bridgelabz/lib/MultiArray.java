@@ -11,6 +11,10 @@ import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.OutputStreamWriter;
 
+/**
+ * @author aashish
+ *
+ */
 public class MultiArray {
 	static boolean[][] barr;
 	static int[][] iarr;

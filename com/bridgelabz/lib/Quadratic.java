@@ -12,6 +12,10 @@ package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
+/**
+ * @author aashish
+ *
+ */
 public class Quadratic {
 
 	static int a, b, c;

@@ -9,6 +9,10 @@ package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
+/**
+ * @author aashish
+ *
+ */
 public class StopWatch {
 
 	private static long start;

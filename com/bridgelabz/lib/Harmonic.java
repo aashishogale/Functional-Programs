@@ -10,6 +10,10 @@ package com.bridgelabz.lib;
 
 public class Harmonic {
 
+	/**
+	 * @author aashish
+	 *
+	 */
 	public static double harmonicNumber(double mNumber) {
 
 		double nharmonic = mNumber;
