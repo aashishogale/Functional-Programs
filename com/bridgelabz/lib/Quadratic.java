@@ -21,14 +21,14 @@ public class Quadratic {
 	static int a, b, c;
 
 	public static void enterRoots() {
-		// use scanner object to get user input
-		Scanner sc = new Scanner(System.in);
+		// use scanneranner object to get user input
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter a");
-		a = sc.nextInt();
+		a = scanner.nextInt();
 		System.out.println("enter b");
-		b = sc.nextInt();
+		b = scanner.nextInt();
 		System.out.println("enter c");
-		c = sc.nextInt();
+		c = scanner.nextInt();
 	}
 
 	public static void calculateRoots(int a, int b, int c) {

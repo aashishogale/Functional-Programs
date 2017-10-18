@@ -22,15 +22,15 @@ public class MultiArray {
 	static int rows, columns;
 
 	public static void iInput() {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter rows and columns");
-		rows = sc.nextInt();
-		columns = sc.nextInt();
+		rows = scanner.nextInt();
+		columns = scanner.nextInt();
 		iarr = new int[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 
-				iarr[i][j] = sc.nextInt();
+				iarr[i][j] = scanner.nextInt();
 
 			}
 		}
@@ -49,15 +49,15 @@ public class MultiArray {
 	}
 
 	public static void bInput() {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter rows and columns");
-		rows = sc.nextInt();
-		columns = sc.nextInt();
+		rows = scanner.nextInt();
+		columns = scanner.nextInt();
 		iarr = new int[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 
-				barr[i][j] = sc.nextBoolean();
+				barr[i][j] = scanner.nextBoolean();
 
 			}
 		}
@@ -76,15 +76,15 @@ public class MultiArray {
 	}
 
 	public static void dInput() {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter rows and columns");
-		rows = sc.nextInt();
-		columns = sc.nextInt();
+		rows = scanner.nextInt();
+		columns = scanner.nextInt();
 		iarr = new int[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 
-				darr[i][j] = sc.nextDouble();
+				darr[i][j] = scanner.nextDouble();
 
 			}
 		}

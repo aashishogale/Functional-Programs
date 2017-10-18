@@ -20,11 +20,11 @@ public class WindChill {
 	static double velocity;
 
 	public static void enterValues() {
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("enter temperature");
-		temperature = sc.nextDouble();
+		temperature = scanner.nextDouble();
 		System.out.println("enter velocity");
-		velocity = sc.nextDouble();
+		velocity = scanner.nextDouble();
 	}
 
 	public static double calculateWc() {

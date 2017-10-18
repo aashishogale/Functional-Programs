@@ -28,9 +28,9 @@ public class StopWatch {
 
 	public static void main(String args[]) {
 
-		Scanner sc = new Scanner(System.in);
-		if (sc.hasNext()) {
-			System.out.println(StopWatch.elapsedTime());
+		Scanner scanner = new Scanner(System.in);
+		if (scanner.hasNext()) {
+			System.out.println("MILLISECONDS "+StopWatch.elapsedTime());
 		}
 	}
 }

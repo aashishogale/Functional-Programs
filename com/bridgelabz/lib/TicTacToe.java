@@ -64,11 +64,22 @@ public class TicTacToe {
 		while (i < 3) {
 			if (arr[i][j] == 'X')
 
-				if (((arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2]))
-						|| ((arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j]))) {
+				if ((arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2]))
+					 {
 					return true;
 				}
 			i++;
+		}
+		i=0;
+		j=0;
+		while (j < 3) {
+			if (arr[i][j] == 'X')
+
+				if
+						 ((arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
+					return true;
+				}
+			j++;
 		}
 
 		i = 0;

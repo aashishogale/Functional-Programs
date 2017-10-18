@@ -21,11 +21,11 @@ public class UserNameEnter {
 
 	public static void main(String args[]) {
 		String str = "Hello <<UserName>>, How are you?”;";
-		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		String userName;
 		System.out.println("Enter user name");
 
-		userName = sc.nextLine();
+		userName = scanner.nextLine();
 		String newstr = str.replaceAll("<<UserName>>", userName);
 		if (checkLength(userName)) {
 			System.out.println(newstr);
