@@ -125,10 +125,10 @@ public class TicTacToe {
 
 		i = 0;
 		j = 0;
-		if (arr[i][j] == 'O')
-			if ((arr[i][j] == arr[i + 1][j + 1]) && (arr[i + 1][j + 1] == arr[i + 2][j + 2])) {
+		if (arr[i][j] == 'O'&&(arr[i][j] == arr[i + 1][j + 1]) && (arr[i + 1][j + 1] == arr[i + 2][j + 2]))
+		
 				return true;
-			}
+
 
 		i = 0;
 		j = 2;
