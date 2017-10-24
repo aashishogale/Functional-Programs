@@ -14,19 +14,20 @@ package com.bridgelabz.lib;
  */
 public class Factors {
 	public static void factor(int number) {
-		System.out.print("The prime factorization of " + number + " is: ");
+		int tempnumber=number;
+		System.out.println("The prime factorization of " + number + " is: ");
 
 		// for each potential factor
-		for (int factor = 2; factor * factor <= number; factor++) {
+		for (int factor = 2; factor * factor <= tempnumber; factor++) {
 
 			// if factor is a factor of n, repeatedly divide it out
-			while (number % factor == 0) {
+			while (tempnumber % factor == 0) {
 				System.out.println(factor + " ");
-				number = number / factor;
+				tempnumber = tempnumber / factor;
 			}
 		}
 
-		System.out.println(number);
+		System.out.println(tempnumber);
 	}
 
 	public static void main(String[] args) {

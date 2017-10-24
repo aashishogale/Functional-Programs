@@ -16,8 +16,8 @@ import java.util.Scanner;
  *
  */
 public class WindChill {
-	static double temperature;
-	static double velocity;
+	public static double temperature;
+	public static double velocity;
 
 	public static void enterValues() {
 		Scanner scanner = new Scanner(System.in);

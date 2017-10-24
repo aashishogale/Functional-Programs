@@ -16,10 +16,11 @@ import java.io.OutputStreamWriter;
  *
  */
 public class MultiArray {
-	static boolean[][] barr;
-	static int[][] iarr;
-	static double[][] darr;
-	static int rows, columns;
+	public static boolean[][] barr;
+	public static int[][] iarr;
+	public static double[][] darr;
+	public static int rows;
+	public static int columns;
 
 	public static void iInput() {
 		Scanner scanner = new Scanner(System.in);

@@ -31,6 +31,7 @@ public class Gambler {
 				wins++;
 
 		}
+		System.out.println("bets made"+bets);
 		return wins;
 	}
 

@@ -15,7 +15,7 @@ package com.bridgelabz.lib;
 public class FlipCoin {
 	public static int countFlips(int total) {
 
-		int heads = 0, tails = 0;
+		int heads = 0;
 
 		// initialize for loop for the number of times heads and tails
 		for (int i = 0; i < total; i++) {

@@ -14,8 +14,8 @@ import java.util.Scanner;
  *
  */
 public class SumIntegerZero {
-	static int[] arr;
-	static int size, count;
+	public static int[] arr;
+	public static int size, count;
 
 	public static void readArray() {
 

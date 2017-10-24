@@ -34,7 +34,9 @@ public class TicTacToe {
 		System.out.println("enter value");
 		row = sc.nextInt();
 		column = sc.nextInt();
-		arr[row - 1][column - 1] = 'X';
+		if (arr[row - 1][column - 1] != '-') {
+			arr[row - 1][column - 1] = 'X';
+		}
 
 	}
 
@@ -62,23 +64,19 @@ public class TicTacToe {
 		int i = 0;
 		int j = 0;
 		while (i < 3) {
-			if (arr[i][j] == 'X')
+			if (arr[i][j] == 'X' && (arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2]))
 
-				if ((arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2]))
-					 {
-					return true;
-				}
+				return true;
+
 			i++;
 		}
-		i=0;
-		j=0;
+		i = 0;
+		j = 0;
 		while (j < 3) {
-			if (arr[i][j] == 'X')
+			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j]))
 
-				if
-						 ((arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
-					return true;
-				}
+				return true;
+
 			j++;
 		}
 

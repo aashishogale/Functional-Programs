@@ -15,9 +15,9 @@ import java.util.Random;
  */
 public class RandomCoupon {
 
-	static Random random;
-	static int count = 1;
-	static int[] tempArr;
+	public static Random random;
+	public static int count = 1;
+	public static int[] tempArr;
 
 	static {
 		random = new Random();

@@ -22,9 +22,9 @@ public class Harmonic {
 		float result = 0;
 
 		// use for loop to calculate the harmonic no
-		for (float i = 1; i <= nharmonic; i++) {
+		for (double i = 1; i <= nharmonic; i++) {
 
-			result = result + (1 / i);
+			result = (float) (result + (1 / i));
 			System.out.print("1/" + i + "+");
 		}
 		return result;

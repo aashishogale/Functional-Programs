@@ -18,7 +18,9 @@ import java.util.Scanner;
  */
 public class Quadratic {
 
-	static int a, b, c;
+	public static int a;
+	public static int b;
+	public static int c;
 
 	public static void enterRoots() {
 		// use scanneranner object to get user input
@@ -33,7 +35,9 @@ public class Quadratic {
 
 	public static void calculateRoots(int a, int b, int c) {
 
-		double root1, root2, d;
+		double root1;
+		double root2;
+		double d;
 		// use formula
 		d = (b * b) - (4 * a * c);
 

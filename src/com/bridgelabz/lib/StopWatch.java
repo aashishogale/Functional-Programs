@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class StopWatch {
 
-	private static long start;
+	public static long start;
 
 	public StopWatch() {
 		start = System.currentTimeMillis();
@@ -30,7 +30,7 @@ public class StopWatch {
 
 		Scanner scanner = new Scanner(System.in);
 		if (scanner.hasNext()) {
-			System.out.println("MILLISECONDS "+StopWatch.elapsedTime());
+			System.out.println("MILLISECONDS " + StopWatch.elapsedTime());
 		}
 	}
 }
