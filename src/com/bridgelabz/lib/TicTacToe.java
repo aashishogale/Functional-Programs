@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  */
 public class TicTacToe {
-	static char[][] arr;
+	public static char[][] arr;
 
 	public static Scanner sc = new Scanner(System.in);
 
@@ -30,11 +30,12 @@ public class TicTacToe {
 
 	public static void userEnter() {
 
-		int row, column;
+		int row;
+		int column;
 		System.out.println("enter value");
 		row = sc.nextInt();
 		column = sc.nextInt();
-		if (arr[row - 1][column - 1] != '-') {
+		if (arr[row - 1][column - 1] == '-') {
 			arr[row - 1][column - 1] = 'X';
 		}
 
@@ -64,35 +65,35 @@ public class TicTacToe {
 		int i = 0;
 		int j = 0;
 		while (i < 3) {
-			if (arr[i][j] == 'X' && (arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2]))
+			if (arr[i][j] == 'X' && (arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2])) {
 
 				return true;
-
+			}
 			i++;
 		}
 		i = 0;
 		j = 0;
 		while (j < 3) {
-			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j]))
+			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
 
 				return true;
-
+			}
 			j++;
 		}
 
 		i = 0;
 		j = 0;
-		if (arr[i][j] == 'X')
-			if ((arr[i][j] == arr[i + 1][j + 1]) && (arr[i + 1][j + 1] == arr[i + 2][j + 2])) {
-				return true;
-			}
+		if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j + 1]) && (arr[i + 1][j + 1] == arr[i + 2][j + 2])) {
+
+			return true;
+		}
 
 		i = 0;
 		j = 2;
-		if (arr[i][j] == 'X')
-			if ((arr[i][j] == arr[i + 1][j - 1]) && (arr[i + 1][j - 1] == arr[i + 2][j - 2])) {
-				return true;
-			}
+		if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j - 1]) && (arr[i + 1][j - 1] == arr[i + 2][j - 2])) {
+
+			return true;
+		}
 
 		return false;
 
@@ -103,11 +104,10 @@ public class TicTacToe {
 		int i = 0;
 		int j = 0;
 		while (i < 3) {
-			if (arr[i][j] == 'O')
+			if (arr[i][j] == 'O' && (arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2])) {
 
-				if ((arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2])) {
-					return true;
-				}
+				return true;
+			}
 			i++;
 		}
 		i = 0;
@@ -115,10 +115,10 @@ public class TicTacToe {
 
 		while (j < 3) {
 
-			if (arr[i][j] == 'O') {
-				if ((arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
-					return true;
-				}
+			if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
+
+				return true;
+
 			}
 			j++;
 		}
@@ -132,10 +132,10 @@ public class TicTacToe {
 
 		i = 0;
 		j = 2;
-		if (arr[i][j] == 'O')
-			if ((arr[i][j] == arr[i + 1][j - 1]) && (arr[i + 1][j - 1] == arr[i + 2][j - 2])) {
-				return true;
-			}
+		if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j - 1]) && (arr[i + 1][j - 1] == arr[i + 2][j - 2])) {
+
+			return true;
+		}
 
 		return false;
 
