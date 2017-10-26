@@ -16,13 +16,14 @@ import java.util.Scanner;
 public class TicTacToe {
 	public static char[][] arr;
 
-	public static Scanner sc = new Scanner(System.in);
+	public static Scanner scanner = new Scanner(System.in);
+	public static int number;
 
 	public static void initArray() {
 
-		arr = new char[3][3];
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		arr = new char[number][number];
+		for (int i = 0; i < number; i++) {
+			for (int j = 0; j < number; j++) {
 				arr[i][j] = '-';
 			}
 		}
@@ -33,10 +34,15 @@ public class TicTacToe {
 		int row;
 		int column;
 		System.out.println("enter value");
-		row = sc.nextInt();
-		column = sc.nextInt();
+		row = scanner.nextInt();
+		column = scanner.nextInt();
+		if(row<=number&&column<=number) {
 		if (arr[row - 1][column - 1] == '-') {
 			arr[row - 1][column - 1] = 'X';
+		} 
+		}else {
+			System.out.println("pls enter correct value");
+			TicTacToe.userEnter();
 		}
 
 	}
@@ -44,8 +50,8 @@ public class TicTacToe {
 	public static void computerEnter() {
 
 		int flag = 0;
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < number; i++) {
+			for (int j = 0; j < number; j++) {
 				if (arr[i][j] == '-') {
 
 					arr[i][j] = 'O';
@@ -64,37 +70,63 @@ public class TicTacToe {
 
 		int i = 0;
 		int j = 0;
-		while (i < 3) {
-			if (arr[i][j] == 'X' && (arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2])) {
 
-				return true;
+		int count = 0;
+		int d1count = 0;
+		int d2count = 0;
+		int hcount = 0;
+		int vcount = 0;
+		for (int m = 0; m < number; m++) {
+			hcount = 0;
+			for (int n = 0; n < number; n++) {
+				if (arr[m][n] == 'X') {
+					hcount++;
+				}
+				if (hcount == number) {
+					return true;
+				}
+			}
+		}
+
+		for (int n = 0; n < number; n++) {
+			vcount = 0;
+			for (int m = 0; m < number; m++) {
+				if (arr[m][n] == 'X') {
+					vcount++;
+				}
+				if (vcount == number) {
+					return true;
+				}
+			}
+		}
+
+		i = 0;
+		j = 0;
+
+		while (i < number - 1 && j < number - 1) {
+d1count=0;
+			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j + 1])) {
+				d1count++;
+				System.out.println(d1count);
 			}
 			i++;
-		}
-		i = 0;
-		j = 0;
-		while (j < 3) {
-			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
-
-				return true;
-			}
 			j++;
+
 		}
 
 		i = 0;
-		j = 0;
-		if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j + 1]) && (arr[i + 1][j + 1] == arr[i + 2][j + 2])) {
-
+		j = number - 1;
+		while (i < number - 1 && j > 0) {
+              d2count=0;
+			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j - 1])) {
+				d2count++;
+			}
+			i++;
+			j--;
+		}
+		if (d1count == number - 1 || d2count == number - 1) {
 			return true;
 		}
-
-		i = 0;
-		j = 2;
-		if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j - 1]) && (arr[i + 1][j - 1] == arr[i + 2][j - 2])) {
-
-			return true;
-		}
-
 		return false;
 
 	}
@@ -103,48 +135,71 @@ public class TicTacToe {
 
 		int i = 0;
 		int j = 0;
-		while (i < 3) {
-			if (arr[i][j] == 'O' && (arr[i][j] == arr[i][j + 1]) && (arr[i][j + 1] == arr[i][j + 2])) {
 
-				return true;
+		
+		int d1count = 0;
+		int d2count = 0;
+		int hcount = 0;
+		int vcount = 0;
+		for (int m = 0; m < number; m++) {
+			hcount = 0;
+			for (int n = 0; n < number; n++) {
+				if (arr[m][n] == 'O') {
+					hcount++;
+				}
+				if (hcount == number) {
+					return true;
+				}
+			}
+		}
+
+		for (int n = 0; n < number; n++) {
+			vcount = 0;
+			for (int m = 0; m < number; m++) {
+				if (arr[m][n] == 'O') {
+					vcount++;
+				}
+				if (vcount == number) {
+					return true;
+				}
+			}
+		}
+
+		i = 0;
+		j = 0;
+
+		while (i < number - 1 && j < number - 1) {
+              
+			if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j + 1])) {
+				d1count++;
+				System.out.println(d1count);
 			}
 			i++;
-		}
-		i = 0;
-		j = 0;
-
-		while (j < 3) {
-
-			if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j]) && (arr[i + 1][j] == arr[i + 2][j])) {
-
-				return true;
-
-			}
 			j++;
+
 		}
 
 		i = 0;
-		j = 0;
-		if (arr[i][j] == 'O'&&(arr[i][j] == arr[i + 1][j + 1]) && (arr[i + 1][j + 1] == arr[i + 2][j + 2]))
-		
-				return true;
+		j = number - 1;
+		while (i < number - 1 && j > 0) {
 
-
-		i = 0;
-		j = 2;
-		if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j - 1]) && (arr[i + 1][j - 1] == arr[i + 2][j - 2])) {
-
+			if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j - 1])) {
+				d2count++;
+			}
+			i++;
+			j--;
+		}
+		if (d1count == number - 1 || d2count == number - 1) {
 			return true;
 		}
-
 		return false;
 
 	}
 
 	public static boolean drawCheck() {
 
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < number; i++) {
+			for (int j = 0; j < number; j++) {
 				if (arr[i][j] == '-') {
 					return false;
 
@@ -157,8 +212,8 @@ public class TicTacToe {
 
 	public static void display() {
 
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
+		for (int i = 0; i < number; i++) {
+			for (int j = 0; j < number; j++) {
 				System.out.print(arr[i][j] + " ");
 			}
 			System.out.println();
@@ -166,7 +221,8 @@ public class TicTacToe {
 	}
 
 	public static void main(String args[]) {
-
+		System.out.println("enter number of rows and columns");
+		number = scanner.nextInt();
 		initArray();
 		display();
 		do {
@@ -178,15 +234,17 @@ public class TicTacToe {
 				break;
 
 			}
+
 			if (computerVictoryCheck()) {
 				System.out.println("computer wins");
 				break;
 
 			}
+
 			if (drawCheck()) {
 				System.out.println("draw");
 				break;
 			}
-		} while (!computerVictoryCheck() || !victoryCheck());
+		} while (!computerVictoryCheck() || !victoryCheck()||!drawCheck());
 	}
 }

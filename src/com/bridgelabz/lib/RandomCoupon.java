@@ -16,28 +16,28 @@ import java.util.Random;
 public class RandomCoupon {
 
 	public static Random random;
-	public static int count = 1;
-	public static int[] tempArr;
 
+	public static int[] tempArr;
+	public static int totalcount = 0;
 	static {
 		random = new Random();
 	}
 
 	public static int generateRandom() {
 		int randomnum;
-		randomnum = (int) (Math.random() * 10);
+		randomnum = (int) (1000 + Math.random() * (9999 - 1000));
 		return randomnum;
 	}
 
-	public static int countDistinct(int couponNo) {
-
+	public static void countDistinct(int couponNo) {
+		int coupon = 0;
 		int[] arr = new int[couponNo];
 		int randomNo;
 		int flag;
+		int count = 1;
 
 		tempArr = new int[couponNo];
 		arr[0] = RandomCoupon.generateRandom();
-		// System.out.println(arr[0]);
 
 		for (int i = 1; i < arr.length; i++) {
 			randomNo = RandomCoupon.generateRandom();
@@ -55,6 +55,7 @@ public class RandomCoupon {
 			if (flag == 0) {
 
 				count++;
+
 				arr[i] = randomNo;
 
 			} else {
@@ -62,12 +63,19 @@ public class RandomCoupon {
 				count++;
 			}
 		}
+		for (int i = 0; i < arr.length; i++) {
 
-		return count;
+			System.out.println("randm no  " + arr[i]);
+
+		}
+		System.out.println("count" + count);
+
 	}
 
 	public static void main(String args[]) {
 		int n = 10;
-		System.out.println("no of Coupons required" + RandomCoupon.countDistinct(n));
+
+		RandomCoupon.countDistinct(n);
+
 	}
 }

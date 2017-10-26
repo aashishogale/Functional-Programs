@@ -42,7 +42,7 @@ public class FlipCoin {
 
 		int total = Integer.parseInt(args[0]);
 
-		System.out.println(countFlips(total));
+		System.out.println("pecentage of head flips"+countFlips(total));
 
 	}
 }

@@ -50,6 +50,6 @@ public class StringFunction {
 
 	public static void main(String args[]) {
 
-		StringFunction.permutate("abc");
+		StringFunction.permutate("abcd");
 	}
 }

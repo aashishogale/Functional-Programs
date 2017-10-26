@@ -21,9 +21,10 @@ public class MultiArray {
 	public static double[][] darr;
 	public static int rows;
 	public static int columns;
+	public static Scanner scanner = new Scanner(System.in);
 
 	public static void iInput() {
-		Scanner scanner = new Scanner(System.in);
+
 		System.out.println("enter rows and columns");
 		rows = scanner.nextInt();
 		columns = scanner.nextInt();
@@ -50,11 +51,11 @@ public class MultiArray {
 	}
 
 	public static void bInput() {
-		Scanner scanner = new Scanner(System.in);
+
 		System.out.println("enter rows and columns");
 		rows = scanner.nextInt();
 		columns = scanner.nextInt();
-		iarr = new int[rows][columns];
+		barr = new boolean[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 
@@ -77,11 +78,11 @@ public class MultiArray {
 	}
 
 	public static void dInput() {
-		Scanner scanner = new Scanner(System.in);
+
 		System.out.println("enter rows and columns");
 		rows = scanner.nextInt();
 		columns = scanner.nextInt();
-		iarr = new int[rows][columns];
+		darr = new double[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 
@@ -105,11 +106,39 @@ public class MultiArray {
 
 	public static void main(String args[]) throws Exception {
 
-		MultiArray.iInput();
-		try {
-			iOutput();
-		} catch (Exception e) {
-			e.printStackTrace();
+		System.out.println("enter choice1 for integer2 for double 3 for boolean");
+
+		int choice = scanner.nextInt();
+		switch (choice) {
+		case 1:
+			MultiArray.iInput();
+			try {
+				iOutput();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
+
+		case 2:
+
+			MultiArray.dInput();
+			try {
+				dOutput();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
+
+		case 3:
+
+			MultiArray.bInput();
+			try {
+				bOutput();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
 		}
+
 	}
 }
