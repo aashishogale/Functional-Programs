@@ -30,7 +30,7 @@ public class RandomCoupon {
 	}
 
 	public static void countDistinct(int couponNo) {
-		int coupon = 0;
+
 		int[] arr = new int[couponNo];
 		int randomNo;
 		int flag;

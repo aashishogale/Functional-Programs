@@ -36,11 +36,11 @@ public class TicTacToe {
 		System.out.println("enter value");
 		row = scanner.nextInt();
 		column = scanner.nextInt();
-		if(row<=number&&column<=number) {
-		if (arr[row - 1][column - 1] == '-') {
-			arr[row - 1][column - 1] = 'X';
-		} 
-		}else {
+		if (row <= number && column <= number) {
+			if (arr[row - 1][column - 1] == '-') {
+				arr[row - 1][column - 1] = 'X';
+			}
+		} else {
 			System.out.println("pls enter correct value");
 			TicTacToe.userEnter();
 		}
@@ -71,9 +71,8 @@ public class TicTacToe {
 		int i = 0;
 		int j = 0;
 
-		int count = 0;
-		int d1count = 0;
-		int d2count = 0;
+		int d1count=0;
+		int d2count=0;
 		int hcount = 0;
 		int vcount = 0;
 		for (int m = 0; m < number; m++) {
@@ -104,10 +103,10 @@ public class TicTacToe {
 		j = 0;
 
 		while (i < number - 1 && j < number - 1) {
-d1count=0;
+		
 			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j + 1])) {
 				d1count++;
-				System.out.println(d1count);
+				
 			}
 			i++;
 			j++;
@@ -117,17 +116,16 @@ d1count=0;
 		i = 0;
 		j = number - 1;
 		while (i < number - 1 && j > 0) {
-              d2count=0;
+		
 			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j - 1])) {
 				d2count++;
 			}
 			i++;
 			j--;
 		}
-		if (d1count == number - 1 || d2count == number - 1) {
-			return true;
-		}
-		return false;
+	 return(d1count == number - 1 || d2count == number - 1) ;
+		
+
 
 	}
 
@@ -136,7 +134,6 @@ d1count=0;
 		int i = 0;
 		int j = 0;
 
-		
 		int d1count = 0;
 		int d2count = 0;
 		int hcount = 0;
@@ -169,7 +166,7 @@ d1count=0;
 		j = 0;
 
 		while (i < number - 1 && j < number - 1) {
-              
+
 			if (arr[i][j] == 'O' && (arr[i][j] == arr[i + 1][j + 1])) {
 				d1count++;
 				System.out.println(d1count);
@@ -189,10 +186,7 @@ d1count=0;
 			i++;
 			j--;
 		}
-		if (d1count == number - 1 || d2count == number - 1) {
-			return true;
-		}
-		return false;
+		return (d1count == number - 1 || d2count == number - 1);
 
 	}
 
@@ -245,6 +239,6 @@ d1count=0;
 				System.out.println("draw");
 				break;
 			}
-		} while (!computerVictoryCheck() || !victoryCheck()||!drawCheck());
+		} while (!computerVictoryCheck() || !victoryCheck() || !drawCheck());
 	}
 }
