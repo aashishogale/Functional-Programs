@@ -39,8 +39,12 @@ public class TicTacToe {
 		if (row <= number && column <= number) {
 			if (arr[row - 1][column - 1] == '-') {
 				arr[row - 1][column - 1] = 'X';
+			} else if (arr[row - 1][column - 1] == 'O' || arr[row - 1][column - 1] == 'X') {
+				System.out.println("pls enter correct value");
+				TicTacToe.userEnter();
 			}
 		} else {
+
 			System.out.println("pls enter correct value");
 			TicTacToe.userEnter();
 		}
@@ -71,8 +75,8 @@ public class TicTacToe {
 		int i = 0;
 		int j = 0;
 
-		int d1count=0;
-		int d2count=0;
+		int d1count = 0;
+		int d2count = 0;
 		int hcount = 0;
 		int vcount = 0;
 		for (int m = 0; m < number; m++) {
@@ -103,10 +107,10 @@ public class TicTacToe {
 		j = 0;
 
 		while (i < number - 1 && j < number - 1) {
-		
+
 			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j + 1])) {
 				d1count++;
-				
+
 			}
 			i++;
 			j++;
@@ -116,16 +120,14 @@ public class TicTacToe {
 		i = 0;
 		j = number - 1;
 		while (i < number - 1 && j > 0) {
-		
+
 			if (arr[i][j] == 'X' && (arr[i][j] == arr[i + 1][j - 1])) {
 				d2count++;
 			}
 			i++;
 			j--;
 		}
-	 return(d1count == number - 1 || d2count == number - 1) ;
-		
-
+		return (d1count == number - 1 || d2count == number - 1);
 
 	}
 
@@ -221,15 +223,16 @@ public class TicTacToe {
 		display();
 		do {
 			userEnter();
-			computerEnter();
-			display();
+
 			if (victoryCheck()) {
+				display();
 				System.out.println("You Win");
 				break;
 
 			}
-
+			computerEnter();
 			if (computerVictoryCheck()) {
+				display();
 				System.out.println("computer wins");
 				break;
 
@@ -239,6 +242,7 @@ public class TicTacToe {
 				System.out.println("draw");
 				break;
 			}
+			display();
 		} while (!computerVictoryCheck() || !victoryCheck() || !drawCheck());
 	}
 }
